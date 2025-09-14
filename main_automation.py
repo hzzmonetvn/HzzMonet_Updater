@@ -185,7 +185,7 @@ class ModuleHandler:
             print(f"[ERROR] Dosya indirilemedi: {url} - {e}")
             return False
 
-    async def process_modules(self):
+    async def process_modules(self, force_all=False):
         print("\n--- Modül Kontrol ve İndirme Aşaması Başlatıldı ---")
         try:
             with open(MODULES_FILE_SRC, 'r', encoding='utf-8') as f:
@@ -219,7 +219,7 @@ class ModuleHandler:
             current_state = self.state.get(name, {})
             posted_version_id = current_state.get('version_id')
 
-            if remote_version_id == posted_version_id:
+            if not force_all and remote_version_id == posted_version_id:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {posted_version_id}). İndirme atlanıyor.")
                 continue
 
@@ -265,7 +265,7 @@ class TelethonPublisher:
             print(f"[ERROR] '{MODULES_FILE_SRC}' dosyası okunurken hata: {e}")
             self.modules_map = {}
 
-    async def publish_updates(self):
+    async def publish_updates(self, force_all=False):
         print("\n--- Telegram Yayınlama Aşaması Başlatıldı ---")
         if not self.state:
             print("[INFO] State boş. Yayınlanacak bir şey yok.")
@@ -278,7 +278,7 @@ class TelethonPublisher:
                 print(f"[WARNING] State'te '{name}' için version_id bulunamadı. Atlanıyor.")
                 continue
 
-            if 'message_id' in info and info.get('version_id') == current_version_id:
+            if not force_all and 'message_id' in info and info.get('version_id') == current_version_id:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {current_version_id}).")
                 continue
 
@@ -325,16 +325,18 @@ async def main():
     if not all([API_ID, API_HASH, SESSION_STRING, GIT_API_TOKEN]):
         raise ValueError("[ERROR] Gerekli tüm ortam değişkenleri (Secrets) ayarlanmalıdır.")
 
-    # Git ayarlarını yap ve state branch'ını çek
     setup_git()
     pull_state_file()
 
     state_manager = StateManager(STATE_DIR)
+    state_exists = os.path.exists(STATE_FILE)
+    force_all = not state_exists
+
     async with TelegramClient(StringSession(SESSION_STRING), int(API_ID), API_HASH) as client:
         handler = ModuleHandler(client, state_manager)
-        await handler.process_modules()
+        await handler.process_modules(force_all=force_all)
         publisher = TelethonPublisher(client, state_manager)
-        await publisher.publish_updates()
+        await publisher.publish_updates(force_all=force_all)
 
     push_state_file()
 
