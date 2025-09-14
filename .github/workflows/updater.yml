@@ -31,6 +31,7 @@ jobs:
         with:
           repository: 'MematiBas42/Cephanelik_Updater'
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Python Ortamını Kur ve Kütüphaneleri Yükle
         uses: actions/setup-python@v5
@@ -47,17 +48,34 @@ jobs:
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
           GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
 
-      - name: Durum Dosyalarını Depoya Kaydet
+      - name: Durum Dosyalarını Depoya Kaydet (state branch)
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-          if [[ -n $(git status --porcelain state) ]]; then
-            echo "[INFO] Durum dosyalarında değişiklikler bulundu, depoya kaydediliyor."
-            git add state/
-            git commit -m "[CI]: Otomasyon durum dosyalarını güncelle"
-            git pull --rebase
-            git push
+          git stash --include-untracked
+
+          git fetch origin
+
+          if git show-ref --quiet refs/remotes/origin/state; then
+            echo "[INFO] 'state' branch bulundu, geçiş yapılıyor."
+            git checkout state || git checkout -b state origin/state
           else
-            echo "[INFO] Yeni değişiklik bulunamadı."
+            echo "[INFO] 'state' branch bulunamadı, yeni oluşturuluyor."
+            git checkout --orphan state
           fi
+
+          git reset --hard
+          git clean -fdx
+
+          git stash pop || true
+
+          if [[ -d state && -n $(git status --porcelain state) ]]; then
+            git add state/
+            git commit -m "[CI]: Refresh state files"
+          else
+            echo "[INFO] Yeni değişiklik bulunamadı, yine de branch güncellenecek."
+            git commit --allow-empty -m "[CI]: Refresh state files (no changes)"
+          fi
+
+          git push -f origin state
