@@ -34,7 +34,6 @@ def setup_git():
     run_command('git config --global user.email "github-actions[bot]@users.noreply.github.com"')
     run_command('git fetch origin')
 
-    # state branch'ı kontrol et ve geçiş yap
     if run_command('git show-ref --quiet refs/remotes/origin/state').returncode == 0:
         print("[INFO] 'state' branch bulundu, geçiş yapılıyor.")
         run_command('git checkout state')
@@ -331,6 +330,10 @@ async def main():
     state_manager = StateManager(STATE_DIR)
     state_exists = os.path.exists(STATE_FILE)
     force_all = not state_exists
+
+    if not state_exists:
+        print("[INFO] state.json dosyası bulunamadı. Yeni bir state dosyası oluşturuluyor.")
+        state_manager.save_json(STATE_FILE, {})
 
     async with TelegramClient(StringSession(SESSION_STRING), int(API_ID), API_HASH) as client:
         handler = ModuleHandler(client, state_manager)
