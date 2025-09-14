@@ -4,6 +4,7 @@ import asyncio
 import requests
 import re
 import shutil
+import subprocess
 from urllib.parse import quote_plus
 from datetime import datetime
 from telethon.sync import TelegramClient
@@ -16,11 +17,44 @@ SESSION_STRING = os.environ.get('TELEGRAM_SESSION_STRING')
 GIT_API_TOKEN = os.environ.get('GIT_API_TOKEN')
 
 # Proje Ayarları
-PUBLISH_CHANNEL_ID = -1002480367639
+PUBLISH_CHANNEL_ID = -1002477121598
 STATE_DIR = "./state"
 CACHE_DIR = os.path.expanduser("~/.cache/ksu-manager")
 MODULES_FILE_SRC = "./modules.json"
 STATE_FILE = os.path.join(STATE_DIR, "state.json")
+
+def run_command(command):
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"[ERROR] Komut başarısız: {command}\n{result.stderr}")
+    return result
+
+def setup_git():
+    run_command('git config --global user.name "github-actions[bot]"')
+    run_command('git config --global user.email "github-actions[bot]@users.noreply.github.com"')
+    run_command('git fetch origin')
+
+    # state branch'ı kontrol et ve geçiş yap
+    if run_command('git show-ref --quiet refs/remotes/origin/state').returncode == 0:
+        print("[INFO] 'state' branch bulundu, geçiş yapılıyor.")
+        run_command('git checkout state')
+    else:
+        print("[INFO] 'state' branch bulunamadı, yeni oluşturuluyor.")
+        run_command('git checkout --orphan state')
+    run_command('git reset --hard')
+    run_command('git clean -fdx')
+
+def pull_state_file():
+    if os.path.exists(STATE_DIR):
+        shutil.rmtree(STATE_DIR)
+    os.makedirs(STATE_DIR, exist_ok=True)
+    if run_command(f'git checkout origin/state -- {STATE_FILE}').returncode != 0:
+        print(f"[WARNING] {STATE_FILE} dosyası state branch'ında bulunamadı. Yeni oluşturulacak.")
+
+def push_state_file():
+    run_command(f'git add {STATE_FILE}')
+    run_command('git commit -m "[CI]: Durum dosyasını yenile" || git commit --allow-empty -m "[CI]: Durum dosyalarını yenile (değişiklik yok)"')
+    run_command('git push -f origin state')
 
 # Projenin durumunu (manifest, telegram durumu vb.) JSON olarak yöneten sınıf.
 class StateManager:
@@ -291,12 +325,18 @@ async def main():
     if not all([API_ID, API_HASH, SESSION_STRING, GIT_API_TOKEN]):
         raise ValueError("[ERROR] Gerekli tüm ortam değişkenleri (Secrets) ayarlanmalıdır.")
 
+    # Git ayarlarını yap ve state branch'ını çek
+    setup_git()
+    pull_state_file()
+
     state_manager = StateManager(STATE_DIR)
     async with TelegramClient(StringSession(SESSION_STRING), int(API_ID), API_HASH) as client:
         handler = ModuleHandler(client, state_manager)
         await handler.process_modules()
         publisher = TelethonPublisher(client, state_manager)
         await publisher.publish_updates()
+
+    push_state_file()
 
     print("\n[INFO] Tüm işlemler başarıyla tamamlandı.")
 
