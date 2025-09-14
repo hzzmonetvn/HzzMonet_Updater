@@ -1,0 +1,65 @@
+# ==============================================================================
+# CEPHANELİK UPDATER - vFINAL - TEK İŞLEYİCİLİ NİHAİ WORKFLOW
+# ==============================================================================
+# AÇIKLAMA: Bu versiyon, projenin tüm mantığını tek bir Python betiğinde
+# (`main_automation.py`) çalıştırır. Maksimum sadelik, okunabilirlik ve
+# sağlamlık sunar.
+
+name: CPUpdater Otomasyon 
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  update-and-publish:
+    environment: production
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Adım: Proje dosyalarını sanal makineye indirir.
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+        with:
+          repository: 'MematiBas42/Cephanelik_Updater'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 2. Adım: Python ortamını ve gerekli kütüphaneleri kurar.
+      - name: Python Ortamını Kur ve Kütüphaneleri Yükle
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install telethon requests
+
+      # 3. Adım: TÜM İŞLEMLERİ ÇALIŞTIR (BİRLEŞİK)
+      # Bu tek adım hem modülleri indirir hem de Telegram'a yayınlar.
+      - name: Modülleri İndir ve Telegram'da Yayınla
+        run: python main_automation.py
+        env:
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
+          GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
+
+      # 4. Adım: Durum dosyalarını (state klasörü) depoya kaydeder.
+      - name: Durum Dosyalarını Depoya Kaydet
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Depoya kaydedilecek bir değişiklik var mı diye kontrol et.
+          # Sadece state klasöründeki değişikliklere odaklanıyoruz.
+          if [[ -n $(git status --porcelain state) ]]; then
+            echo "Durum dosyalarında değişiklikler bulundu, depoya kaydediliyor."
+            git add state/
+            git commit -m "ci: Otomasyon durum dosyalarını güncelle"
+            git pull --rebase
+            git push
+          else
+            echo "Yeni değişiklik bulunamadı."
+          fi
+
