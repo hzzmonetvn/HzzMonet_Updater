@@ -16,7 +16,7 @@ SESSION_STRING = os.environ.get('TELEGRAM_SESSION_STRING')
 GIT_API_TOKEN = os.environ.get('GIT_API_TOKEN')
 
 # Proje Ayarları
-PUBLISH_CHANNEL_ID = -1002477121598
+PUBLISH_CHANNEL_ID = -1002480367639
 STATE_DIR = "./state"
 CACHE_DIR = os.path.expanduser("~/.cache/ksu-manager")
 MODULES_FILE_SRC = "./modules.json"
@@ -182,7 +182,8 @@ class ModuleHandler:
                 continue
 
             remote_version_id = remote_info['version_id']
-            posted_version_id = self.state.get(name, {}).get('version_id')
+            current_state = self.state.get(name, {})
+            posted_version_id = current_state.get('version_id')
 
             if remote_version_id == posted_version_id:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {posted_version_id}). İndirme atlanıyor.")
@@ -200,7 +201,7 @@ class ModuleHandler:
 
             if success:
                 state_was_updated = True
-                old_file_in_state = self.state.get(name, {}).get('file_name')
+                old_file_in_state = current_state.get('file_name')
                 if old_file_in_state and old_file_in_state != remote_info['file_name'] and os.path.exists(os.path.join(CACHE_DIR, old_file_in_state)):
                     os.remove(os.path.join(CACHE_DIR, old_file_in_state))
 
@@ -243,9 +244,8 @@ class TelethonPublisher:
                 print(f"[WARNING] State'te '{name}' için version_id bulunamadı. Atlanıyor.")
                 continue
 
-            posted_version_id = info.get('version_id')
-            if 'message_id' in info:
-                print(f"[INFO] '{name}' Telegram'da zaten güncel.")
+            if 'message_id' in info and info.get('version_id') == current_version_id:
+                print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {current_version_id}).")
                 continue
 
             current_filename = info['file_name']
@@ -255,11 +255,10 @@ class TelethonPublisher:
                 print(f"[ERROR] Dosya diskte bulunamadı: {filepath}. Atlanıyor.")
                 continue
 
-            posted_info = info
-            if 'message_id' in posted_info:
-                print(f"[TELEGRAM] Eski mesaj siliniyor (ID: {posted_info['message_id']})...")
+            if 'message_id' in info:
+                print(f"[TELEGRAM] Eski mesaj siliniyor (ID: {info['message_id']})...")
                 try:
-                    await self.client.delete_messages(PUBLISH_CHANNEL_ID, posted_info['message_id'])
+                    await self.client.delete_messages(PUBLISH_CHANNEL_ID, info['message_id'])
                 except Exception as e:
                     print(f"[WARNING] Eski mesaj silinemedi: {e}")
 
