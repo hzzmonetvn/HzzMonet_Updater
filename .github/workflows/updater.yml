@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Eski çalıştırmaları temizle
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
         run: |
           gh run list -L400 --json databaseId -q '.[].databaseId' | tail -n+5 | xargs -IID gh api "repos/$GITHUB_REPOSITORY/actions/runs/ID" -X DELETE || :
 
@@ -48,34 +48,17 @@ jobs:
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
           GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
 
-      - name: Durum Dosyalarını Depoya Kaydet (state branch)
+      - name: Durum Dosyalarını Depoya Kaydet
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-          git stash --include-untracked
-
-          git fetch origin
-
-          if git show-ref --quiet refs/remotes/origin/state; then
-            echo "[INFO] 'state' branch bulundu, geçiş yapılıyor."
-            git checkout state || git checkout -b state origin/state
-          else
-            echo "[INFO] 'state' branch bulunamadı, yeni oluşturuluyor."
-            git checkout --orphan state
-          fi
-
-          git reset --hard
-          git clean -fdx
-
-          git stash pop || true
-
-          if [[ -d state && -n $(git status --porcelain state) ]]; then
+          if [[ -n $(git status --porcelain state) ]]; then
+            echo "[INFO] State.json değişiklikler bulundu, depoya kaydediliyor."
             git add state/
-            git commit -m "[CI]: Durum dosyasını yenile"
+            git commit -m "[CI]: State.json güncellendi"
+            git pull --rebase
+            git push
           else
-            echo "[INFO] Yeni değişiklik bulunamadı, yine de branch güncellenecek."
-            git commit --allow-empty -m "[CI]: Durum dosyalarını yenile (değişiklik yok)"
+            echo "[INFO] Yeni değişiklik bulunamadı."
           fi
-
-          git push -f origin state
