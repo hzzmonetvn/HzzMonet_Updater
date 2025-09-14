@@ -72,10 +72,10 @@ jobs:
 
           if [[ -d state && -n $(git status --porcelain state) ]]; then
             git add state/
-            git commit -m "[CI]: Refresh state files"
+            git commit -m "[CI]: Durum dosyasını yenile"
           else
             echo "[INFO] Yeni değişiklik bulunamadı, yine de branch güncellenecek."
-            git commit --allow-empty -m "[CI]: Refresh state files (no changes)"
+            git commit --allow-empty -m "[CI]: Durum dosyalarını yenile (değişiklik yok)"
           fi
 
           git push -f origin state
