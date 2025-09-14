@@ -20,8 +20,7 @@ PUBLISH_CHANNEL_ID = -1002477121598
 STATE_DIR = "./state"
 CACHE_DIR = os.path.expanduser("~/.cache/ksu-manager")
 MODULES_FILE_SRC = "./modules.json"
-MANIFEST_FILE = os.path.join(STATE_DIR, "manifest.json")
-TELEGRAM_STATE_FILE = os.path.join(STATE_DIR, "telegram_state.json")
+STATE_FILE = os.path.join(STATE_DIR, "state.json")
 
 # Projenin durumunu (manifest, telegram durumu vb.) JSON olarak yöneten sınıf.
 class StateManager:
@@ -55,7 +54,7 @@ class ModuleHandler:
     def __init__(self, client, state_manager):
         self.client = client
         self.state_manager = state_manager
-        self.manifest = self.state_manager.load_json(MANIFEST_FILE)
+        self.state = self.state_manager.load_json(STATE_FILE)
         os.makedirs(CACHE_DIR, exist_ok=True)
 
     def _get_api_call(self, url, is_json=True):
@@ -161,13 +160,11 @@ class ModuleHandler:
             print(f"[CRITICAL MISTAKE] '{MODULES_FILE_SRC}' dosyası bulunamadı veya bozuk. Çıkılıyor: {e}")
             return
 
-        telegram_state = self.state_manager.load_json(TELEGRAM_STATE_FILE)
-        manifest_was_updated = False
+        state_was_updated = False
 
         for module in sorted([m for m in modules if m.get('enabled')], key=lambda x: x['name']):
             name, type_ = module['name'], module['type']
             print(f"\n[PROCESS] Uzak sürüm kontrol ediliyor: {name} (Tip: {type_})")
-
             getter_func = {
                 'telegram_forwarder': self._get_telegram_remote_info,
                 'github_release': self._get_github_release_remote_info,
@@ -185,7 +182,7 @@ class ModuleHandler:
                 continue
 
             remote_version_id = remote_info['version_id']
-            posted_version_id = telegram_state.get(name, {}).get('version_id')
+            posted_version_id = self.state.get(name, {}).get('version_id')
 
             if remote_version_id == posted_version_id:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {posted_version_id}). İndirme atlanıyor.")
@@ -193,7 +190,6 @@ class ModuleHandler:
 
             print(f"[DOWNLOAD] '{name}' için yeni sürüm indirilecek (Bulut ID: {remote_version_id}, Kanal ID: {posted_version_id or 'YOK'})")
             path = os.path.join(CACHE_DIR, remote_info['file_name'])
-
             success = False
             if 'telegram_message' in remote_info:
                 message_to_download = remote_info.pop('telegram_message')
@@ -203,19 +199,20 @@ class ModuleHandler:
                 success = self._download_file_sync(remote_info.pop('download_url'), path)
 
             if success:
-                manifest_was_updated = True
-                old_file_in_manifest = self.manifest.get(name, {}).get('file_name')
-                if old_file_in_manifest and old_file_in_manifest != remote_info['file_name'] and os.path.exists(os.path.join(CACHE_DIR, old_file_in_manifest)):
-                    os.remove(os.path.join(CACHE_DIR, old_file_in_manifest))
-                self.manifest[name] = remote_info
-                print(f"[SUCCESSFUL] '{name}' indirildi ve manifest güncellendi.")
+                state_was_updated = True
+                old_file_in_state = self.state.get(name, {}).get('file_name')
+                if old_file_in_state and old_file_in_state != remote_info['file_name'] and os.path.exists(os.path.join(CACHE_DIR, old_file_in_state)):
+                    os.remove(os.path.join(CACHE_DIR, old_file_in_state))
+
+                self.state[name] = remote_info
+                print(f"[SUCCESSFUL] '{name}' indirildi ve state güncellendi.")
             else:
                 print(f"[ERROR] '{name}' indirilemediği için bu döngüde atlanacak.")
 
-        if manifest_was_updated:
-            self.state_manager.save_json(MANIFEST_FILE, self.manifest)
+        if state_was_updated:
+            self.state_manager.save_json(STATE_FILE, self.state)
         else:
-            print("\n[INFO] Hiçbir modül indirilmedi, manifest dosyası değişmedi.")
+            print("\n[INFO] Hiçbir modül indirilmedi, state dosyası değişmedi.")
 
         print("--- Modül Kontrol ve İndirme Aşaması Tamamlandı ---")
 
@@ -224,8 +221,7 @@ class TelethonPublisher:
     def __init__(self, client, state_manager):
         self.client = client
         self.state_manager = state_manager
-        self.manifest = state_manager.load_json(MANIFEST_FILE)
-        self.telegram_state = state_manager.load_json(TELEGRAM_STATE_FILE)
+        self.state = state_manager.load_json(STATE_FILE)
         try:
             with open(MODULES_FILE_SRC, 'r', encoding='utf-8') as f:
                 modules_list = json.load(f).get('modules', [])
@@ -236,33 +232,31 @@ class TelethonPublisher:
 
     async def publish_updates(self):
         print("\n--- Telegram Yayınlama Aşaması Başlatıldı ---")
-        if not self.manifest:
-            print("[INFO] Manifest boş. Yayınlanacak bir şey yok.")
+        if not self.state:
+            print("[INFO] State boş. Yayınlanacak bir şey yok.")
             return
 
-        for name, info in sorted(self.manifest.items()):
+        for name, info in sorted(self.state.items()):
             print(f"\n[PROCESS] Yayın durumu kontrol ediliyor: {name}")
-
             current_version_id = info.get('version_id')
             if not current_version_id:
-                print(f"[WARNING] Manifest'te '{name}' için version_id bulunamadı. Atlanıyor.")
+                print(f"[WARNING] State'te '{name}' için version_id bulunamadı. Atlanıyor.")
                 continue
 
-            posted_version_id = self.telegram_state.get(name, {}).get('version_id')
-            if current_version_id == posted_version_id:
+            posted_version_id = info.get('version_id')
+            if 'message_id' in info:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel.")
                 continue
 
             current_filename = info['file_name']
             print(f"[UPDATE] '{name}' için yeni sürüm yayınlanacak: {current_filename}")
             filepath = os.path.join(CACHE_DIR, current_filename)
-
             if not os.path.exists(filepath):
                 print(f"[ERROR] Dosya diskte bulunamadı: {filepath}. Atlanıyor.")
                 continue
 
-            posted_info = self.telegram_state.get(name)
-            if posted_info and 'message_id' in posted_info:
+            posted_info = info
+            if 'message_id' in posted_info:
                 print(f"[TELEGRAM] Eski mesaj siliniyor (ID: {posted_info['message_id']})...")
                 try:
                     await self.client.delete_messages(PUBLISH_CHANNEL_ID, posted_info['message_id'])
@@ -277,40 +271,31 @@ class TelethonPublisher:
                 f"📅 <b>Update Date:</b> {info['date']}\n\n"
                 f"🔗 <b><a href='{info['source_url']}'>Source</a></b>\n"
             )
-
             print(f"[TELEGRAM] Yeni dosya '{current_filename}' yükleniyor...")
             try:
                 message = await self.client.send_file(
                     PUBLISH_CHANNEL_ID, filepath, caption=caption, parse_mode='html', silent=True)
-
-                self.telegram_state[name] = {
-                    'message_id': message.id,
-                    'file_name': current_filename,
-                    'version_id': current_version_id
-                }
+                self.state[name]['message_id'] = message.id
                 print(f"[SUCCESSFUL] '{name}' güncellendi. Yeni Mesaj ID: {message.id}")
             except Exception as e:
                 print(f"[CRITICAL MISTAKE] Dosya yüklenemedi: {name} - {e}")
 
-        self.state_manager.save_json(TELEGRAM_STATE_FILE, self.telegram_state)
+        self.state_manager.save_json(STATE_FILE, self.state)
         print("--- Telegram Yayınlama Aşaması Tamamlandı ---")
 
 # Ana otomasyon fonksiyonu.
 async def main():
     print("==============================================")
-    print(f"   Cephanelik Updater v7.0 Başlatıldı")
+    print(f"   Cephanelik Updater v7.1 Başlatıldı")
     print(f"   {datetime.now()}")
     print("==============================================")
-
     if not all([API_ID, API_HASH, SESSION_STRING, GIT_API_TOKEN]):
         raise ValueError("[ERROR] Gerekli tüm ortam değişkenleri (Secrets) ayarlanmalıdır.")
 
     state_manager = StateManager(STATE_DIR)
-
     async with TelegramClient(StringSession(SESSION_STRING), int(API_ID), API_HASH) as client:
         handler = ModuleHandler(client, state_manager)
         await handler.process_modules()
-
         publisher = TelethonPublisher(client, state_manager)
         await publisher.publish_updates()
 
