@@ -191,7 +191,7 @@ class ModuleHandler:
                 print(f"[INFO] '{name}' Telegram'da zaten güncel (Sürüm ID: {posted_version_id}). İndirme atlanıyor.")
                 continue
 
-            print(f"[İNDİRME] '{name}' için yeni sürüm indirilecek (Bulut ID: {remote_version_id}, Kanal ID: {posted_version_id or 'YOK'})")
+            print(f"[DOWNLOAD] '{name}' için yeni sürüm indirilecek (Bulut ID: {remote_version_id}, Kanal ID: {posted_version_id or 'YOK'})")
             path = os.path.join(CACHE_DIR, remote_info['file_name'])
 
             success = False
