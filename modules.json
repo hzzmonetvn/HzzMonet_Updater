@@ -133,7 +133,7 @@
       "enabled": true,
       "type": "github_release",
       "source": "reveny/Android-Native-Root-Detector",
-      "asset_filter": "\\.zip$",
+      "asset_filter": "\\.apk$",
       "description": "Native Root Detector"
     },
     {
