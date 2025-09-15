@@ -20,18 +20,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Eski çalıştırmaları temizle
-        env:
-          GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
-        run: |
-          gh run list -L400 --json databaseId -q '.[].databaseId' | tail -n+5 | xargs -IID gh api "repos/$GITHUB_REPOSITORY/actions/runs/ID" -X DELETE || :
-
       - name: Depoyu Klonla
         uses: actions/checkout@v4
         with:
           repository: 'MematiBas42/Cephanelik_Updater'
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
 
       - name: Python Ortamını Kur ve Kütüphaneleri Yükle
         uses: actions/setup-python@v5
