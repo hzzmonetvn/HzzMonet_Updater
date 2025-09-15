@@ -9,7 +9,7 @@ name: CPUpdater Otomasyon
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'
+#    - cron: '0 * * * *'
 
 jobs:
   update-and-publish:
