@@ -20,18 +20,16 @@ jobs:
       contents: write
 
     steps:
-      - name: Depoyu Klonla
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: 'MematiBas42/Cephanelik_Updater'
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Python Ortamını Kur ve Kütüphaneleri Yükle
+      - name: Python Ortamını Kur
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - run: pip install telethon requests
+      - name: Gerekli Kütüphaneleri Yükle
+        run: pip install telethon requests
 
       - name: Modülleri İndir ve Telegram'da Yayınla
         run: python main_automation.py
