@@ -93,7 +93,7 @@
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/frknkrc44/HMA-OSS/workflows/main.yml/master",
-      "asset_filter": "\\-debug.zip$",
+      "asset_filter": "\\.zip$",
       "description": "frknkrc44/HMA-OSS"
     },
     {
