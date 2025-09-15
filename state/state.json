@@ -75,8 +75,8 @@
     "reveny": {
       "date": "14.09.2025 17:13",
       "file_name": "native-root-detector-v7.6.1.apk",
-      "source_url": "https://t.me/rootdetector/49",
-      "version_id": "49"
+      "source_url": "https://github.com/reveny/Android-Native-Root-Detector/releases/tag/v7.6.1",
+      "version_id": "2025-09-14T17:13:56Z"
     },
     "rezygisk": {
       "date": "15.09.2025 09:19",
@@ -184,8 +184,8 @@
     },
     "reveny": {
       "file_name": "native-root-detector-v7.6.1.apk",
-      "message_id": 436,
-      "version_id": "49"
+      "message_id": 446,
+      "version_id": "2025-09-14T17:13:56Z"
     },
     "rezygisk": {
       "file_name": "ReZygisk-v1.0.0-410-f6b4074-release.zip",
