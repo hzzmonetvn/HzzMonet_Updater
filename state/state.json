@@ -85,10 +85,10 @@
       "version_id": "ReZygisk-v1.0.0-410-f6b4074-release.zip"
     },
     "shamiko": {
-      "date": "04.09.2025 02:55",
-      "file_name": "Shamiko-v1.2.5.1-417-release.zip",
-      "source_url": "https://t.me/LSPosed/298",
-      "version_id": "298"
+      "date": "18.06.2025 11:37",
+      "file_name": "Shamiko-v1.2.5-414-release.zip",
+      "source_url": "https://github.com/LSPosed/LSPosed.github.io/releases/tag/shamiko-414",
+      "version_id": "2025-06-18T11:37:08Z"
     },
     "susfs": {
       "date": "15.09.2025 09:19",
@@ -193,9 +193,9 @@
       "version_id": "ReZygisk-v1.0.0-410-f6b4074-release.zip"
     },
     "shamiko": {
-      "file_name": "Shamiko-v1.2.5.1-417-release.zip",
-      "message_id": 438,
-      "version_id": "298"
+      "file_name": "Shamiko-v1.2.5-414-release.zip",
+      "message_id": 445,
+      "version_id": "2025-06-18T11:37:08Z"
     },
     "susfs": {
       "file_name": "release-1.5.2%2B_3d255a3.zip",
