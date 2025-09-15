@@ -91,11 +91,10 @@
     {
       "name": "hma",
       "enabled": true,
-      "type": "telegram_forwarder",
-      "source": "HMA*release\\.apk",
-      "asset_filter": "",
-	  "source_channel": "aerathfuns", 
-      "description": "Aerath/Hide-My-Applist"
+      "type": "github_ci",
+      "source": "https://nightly.link/frknkrc44/HMA-OSS/workflows/main.yml/master",
+      "asset_filter": "\\.zip$",
+      "description": "frknkrc44/HMA-OSS"
     },
     {
       "name": "rezygisk",
