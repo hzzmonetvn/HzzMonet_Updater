@@ -97,10 +97,10 @@
       "version_id": "release-1.5.2%2B_3d255a3.zip"
     },
     "taddon": {
-      "date": "15.09.2025 09:19",
-      "file_name": "TrickyAddonModule-v4.1-589-canary.zip",
+      "date": "16.09.2025 08:21",
+      "file_name": "TrickyAddonModule-v4.1-591-canary.zip",
       "source_url": "https://nightly.link/KOWX712/Tricky-Addon-Update-Target-List/workflows/build.yml/main",
-      "version_id": "TrickyAddonModule-v4.1-589-canary.zip"
+      "version_id": "TrickyAddonModule-v4.1-591-canary.zip"
     },
     "trm": {
       "date": "06.09.2025 00:11",
@@ -203,9 +203,9 @@
       "version_id": "release-1.5.2%2B_3d255a3.zip"
     },
     "taddon": {
-      "file_name": "TrickyAddonModule-v4.1-589-canary.zip",
-      "message_id": 440,
-      "version_id": "TrickyAddonModule-v4.1-589-canary.zip"
+      "file_name": "TrickyAddonModule-v4.1-591-canary.zip",
+      "message_id": 450,
+      "version_id": "TrickyAddonModule-v4.1-591-canary.zip"
     },
     "trm": {
       "file_name": "TermuxRootMods-v1.0.21.zip",
