@@ -67,10 +67,10 @@
       "version_id": "2025-05-31T03:10:36Z"
     },
     "pif": {
-      "date": "15.09.2025 09:18",
-      "file_name": "PlayIntegrityFix_v4.3-inject-s_169.zip",
+      "date": "18.09.2025 17:13",
+      "file_name": "PlayIntegrityFix_v4.3-inject-s_173.zip",
       "source_url": "https://nightly.link/KOWX712/PlayIntegrityFix/workflows/android.yml/inject_s",
-      "version_id": "PlayIntegrityFix_v4.3-inject-s_169.zip"
+      "version_id": "PlayIntegrityFix_v4.3-inject-s_173.zip"
     },
     "reveny": {
       "date": "14.09.2025 17:13",
@@ -178,9 +178,9 @@
       "version_id": "2025-05-31T03:10:36Z"
     },
     "pif": {
-      "file_name": "PlayIntegrityFix_v4.3-inject-s_169.zip",
-      "message_id": 435,
-      "version_id": "PlayIntegrityFix_v4.3-inject-s_169.zip"
+      "file_name": "PlayIntegrityFix_v4.3-inject-s_173.zip",
+      "message_id": 456,
+      "version_id": "PlayIntegrityFix_v4.3-inject-s_173.zip"
     },
     "reveny": {
       "file_name": "native-root-detector-v7.6.1.apk",
