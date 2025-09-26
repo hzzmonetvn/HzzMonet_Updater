@@ -9,12 +9,20 @@
 	  "description": "TrickyStore"
     },
     {
-      "name": "pif",
+      "name": "pif_ci",
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/KOWX712/PlayIntegrityFix/workflows/android.yml/inject_s",
       "asset_filter": "\\.zip$",
-      "description": "KOWX712/PlayIntegrityFix (inject_s)"
+      "description": "KOWX712/PlayIntegrityFix (inject_s) (nightly) [Modules]"
+    },
+    {
+      "name": "pif_release",
+      "enabled": true,
+      "type": "github_release",
+      "source": "KOWX712/PlayIntegrityFix",
+      "asset_filter": "\\.zip$",
+      "description": "KOWX712/PlayIntegrityFix (inject_s) (release) [Modules]"
     },
     {
       "name": "ZygiskNext",
@@ -25,12 +33,20 @@
       "description": "Dr-TSNG/ZygiskNext"
     },
     {
-      "name": "taddon",
+      "name": "taddon_ci",
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/KOWX712/Tricky-Addon-Update-Target-List/workflows/build.yml/main",
       "asset_filter": "\\.zip$",
-      "description": "KOWX712/Tricky Addon"
+      "description": "KOWX712/Tricky-Addon (nightly) [Modules]"
+    },
+    {
+      "name": "taddon_release",
+      "enabled": true,
+      "type": "github_release",
+      "source": "KOWX712/Tricky-Addon-Update-Target-List",
+      "asset_filter": "\\.zip$",
+      "description": "KOWX712/Tricky-Addon (release) [Modules]"
     },
     {
       "name": "viper",
@@ -49,12 +65,20 @@
       "description": "bindhosts"
     },
     {
-      "name": "susfs",
+      "name": "susfs_ci",
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/sidex15/susfs4ksu-module/workflows/build.yml/v1.5.2+_R21",
       "asset_filter": "\\.zip$",
-      "description": "sidex15/susfs4ksu-module"
+      "description": "sidex15/susfs4ksu-module (nightly) [Modules]"
+    },
+    {
+      "name": "susfs_release",
+      "enabled": true,
+      "type": "github_release",
+      "source": "sidex15/susfs4ksu-module",
+      "asset_filter": "\\.zip$",
+      "description": "sidex15/susfs4ksu-module (release) [Modules]"
     },
     {
       "name": "lsposed",
@@ -89,12 +113,20 @@
       "description": "cuynu/gphotos-unlimited-zygisk"
     },
     {
-      "name": "hma",
+      "name": "hma_ci",
       "enabled": true,
       "type": "github_ci",
       "source": "https://nightly.link/frknkrc44/HMA-OSS/workflows/main.yml/master",
       "asset_filter": "\\.zip$",
-      "description": "frknkrc44/HMA-OSS"
+      "description": "frknkrc44/HMA-OSS (nightly) [Unzip for Apk]"
+    },
+    {
+      "name": "hma_release",
+      "enabled": true,
+      "type": "github_release",
+      "source": "frknkrc44/HMA-OSS",
+      "asset_filter": "\\.zip$",
+      "description": "frknkrc44/HMA-OSS (release) [Unzip for Apk]"
     },
     {
       "name": "rezygisk",
