@@ -37,10 +37,10 @@
       "version_id": "2025-07-16T10:21:47Z"
     },
     "bindh": {
-      "date": "27.09.2025 11:10",
-      "file_name": "bindhosts_207-4ad8bae.zip",
+      "date": "29.09.2025 21:12",
+      "file_name": "bindhosts_207-9406915.zip",
       "source_url": "https://nightly.link/bindhosts/bindhosts/workflows/release.yml/master",
-      "version_id": "bindhosts_207-4ad8bae.zip"
+      "version_id": "bindhosts_207-9406915.zip"
     },
     "hma": {
       "date": "26.09.2025 19:11",
@@ -133,10 +133,10 @@
       "version_id": "TrickyAddonModule-v4.1-595-canary.zip"
     },
     "taddon_ci": {
-      "date": "26.09.2025 22:13",
-      "file_name": "TrickyAddonModule-v4.1-595-canary.zip",
+      "date": "29.09.2025 21:13",
+      "file_name": "TrickyAddonModule-v4.1-596-canary.zip",
       "source_url": "https://nightly.link/KOWX712/Tricky-Addon-Update-Target-List/workflows/build.yml/main",
-      "version_id": "TrickyAddonModule-v4.1-595-canary.zip"
+      "version_id": "TrickyAddonModule-v4.1-596-canary.zip"
     },
     "taddon_release": {
       "date": "25.07.2025 10:51",
@@ -195,9 +195,9 @@
       "version_id": "2025-07-16T10:21:47Z"
     },
     "bindh": {
-      "file_name": "bindhosts_207-4ad8bae.zip",
-      "message_id": 474,
-      "version_id": "bindhosts_207-4ad8bae.zip"
+      "file_name": "bindhosts_207-9406915.zip",
+      "message_id": 476,
+      "version_id": "bindhosts_207-9406915.zip"
     },
     "hma": {
       "file_name": "HMA-OSS-oss-109-release.zip",
@@ -275,9 +275,9 @@
       "version_id": "TrickyAddonModule-v4.1-595-canary.zip"
     },
     "taddon_ci": {
-      "file_name": "TrickyAddonModule-v4.1-595-canary.zip",
-      "message_id": 472,
-      "version_id": "TrickyAddonModule-v4.1-595-canary.zip"
+      "file_name": "TrickyAddonModule-v4.1-596-canary.zip",
+      "message_id": 477,
+      "version_id": "TrickyAddonModule-v4.1-596-canary.zip"
     },
     "taddon_release": {
       "file_name": "TrickyAddonModule-v4.1.zip",
