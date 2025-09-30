@@ -61,10 +61,10 @@
       "version_id": "LSPosed-v1.10.2-7190-zygisk-release.zip"
     },
     "magiskalpha": {
-      "date": "14.08.2025 09:26",
+      "date": "30.09.2025 09:39",
       "file_name": "app-release.apk",
-      "source_url": "https://t.me/magiskalpha/693",
-      "version_id": "693"
+      "source_url": "https://t.me/magiskalpha/706",
+      "version_id": "706"
     },
     "nohello": {
       "date": "31.05.2025 03:10",
@@ -157,10 +157,10 @@
       "version_id": "2025-01-07T21:55:35Z"
     },
     "yurikey": {
-      "date": "12.09.2025 17:55",
-      "file_name": "YuriKey_v1.90.signed.zip",
-      "source_url": "https://github.com/YurikeyDev/yurikey/releases/tag/v1.90",
-      "version_id": "2025-09-12T17:55:10Z"
+      "date": "30.09.2025 09:32",
+      "file_name": "YuriKey_v2.00.signed.zip",
+      "source_url": "https://github.com/YurikeyDev/yurikey/releases/tag/v2.00",
+      "version_id": "2025-09-30T09:32:00Z"
     }
   },
   "telegram_state": {
@@ -216,8 +216,8 @@
     },
     "magiskalpha": {
       "file_name": "app-release.apk",
-      "message_id": 433,
-      "version_id": "693"
+      "message_id": 478,
+      "version_id": "706"
     },
     "nohello": {
       "file_name": "Nohello-v0.0.7-53-4d53ecf-release.zip",
@@ -295,9 +295,9 @@
       "version_id": "2025-01-07T21:55:35Z"
     },
     "yurikey": {
-      "file_name": "YuriKey_v1.90.signed.zip",
-      "message_id": 443,
-      "version_id": "2025-09-12T17:55:10Z"
+      "file_name": "YuriKey_v2.00.signed.zip",
+      "message_id": 479,
+      "version_id": "2025-09-30T09:32:00Z"
     }
   }
 }
