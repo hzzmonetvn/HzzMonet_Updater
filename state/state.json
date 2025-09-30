@@ -157,10 +157,10 @@
       "version_id": "2025-01-07T21:55:35Z"
     },
     "yurikey": {
-      "date": "30.09.2025 11:56",
-      "file_name": "YuriKey_v2.00.signed.zip",
-      "source_url": "https://github.com/YurikeyDev/yurikey/releases/tag/v2.00",
-      "version_id": "2025-09-30T11:56:26Z"
+      "date": "30.09.2025 20:23",
+      "file_name": "YuriKey_v2.10.signed.zip",
+      "source_url": "https://github.com/YurikeyDev/yurikey/releases/tag/v2.10",
+      "version_id": "2025-09-30T20:23:14Z"
     }
   },
   "telegram_state": {
@@ -295,9 +295,9 @@
       "version_id": "2025-01-07T21:55:35Z"
     },
     "yurikey": {
-      "file_name": "YuriKey_v2.00.signed.zip",
-      "message_id": 481,
-      "version_id": "2025-09-30T11:56:26Z"
+      "file_name": "YuriKey_v2.10.signed.zip",
+      "message_id": 482,
+      "version_id": "2025-09-30T20:23:14Z"
     }
   }
 }
