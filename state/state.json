@@ -61,10 +61,10 @@
       "version_id": "LSPosed-v1.10.2-7190-zygisk-release.zip"
     },
     "magiskalpha": {
-      "date": "30.09.2025 09:39",
+      "date": "02.10.2025 12:54",
       "file_name": "app-release.apk",
-      "source_url": "https://t.me/magiskalpha/706",
-      "version_id": "706"
+      "source_url": "https://t.me/magiskalpha/708",
+      "version_id": "708"
     },
     "nohello": {
       "date": "31.05.2025 03:10",
@@ -216,8 +216,8 @@
     },
     "magiskalpha": {
       "file_name": "app-release.apk",
-      "message_id": 478,
-      "version_id": "706"
+      "message_id": 483,
+      "version_id": "708"
     },
     "nohello": {
       "file_name": "Nohello-v0.0.7-53-4d53ecf-release.zip",
