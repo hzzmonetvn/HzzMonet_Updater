@@ -352,6 +352,15 @@
       "asset_filter": "\\.zip$",
       "source_channel": "LSP_Leaks",
       "description": "LSP_Leaks"
+    },
+    {
+      "name": "APatchChannel",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "APatchChannel",
+      "description": "APatchChannel"
     }
   ]
 }
