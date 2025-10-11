@@ -361,6 +361,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "APatchChannel",
       "description": "APatchChannel"
-    }
+    },
+    {
+      "name": "MTManager",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "mtmanager",
+      "description": "MT Manager"
+}
   ]
 }
