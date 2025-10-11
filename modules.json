@@ -370,6 +370,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "mtmanager",
       "description": "MT Manager"
-}
-  ]
+    },
+    {
+      "name": "NP-Manager",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "NP_Manager_Channel",
+      "description": "NP Manager"
+    }
+  
 }
