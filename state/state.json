@@ -1,5 +1,11 @@
 {
   "manifest": {
+    "APatchChannel": {
+      "date": "07.07.2025 11:28",
+      "file_name": "APatch_11107_11107-release-signed.apk",
+      "source_url": "https://t.me/APatchChannel/116",
+      "version_id": "116"
+    },
     "AndroidFaker": {
       "date": "18.12.2023 05:32",
       "file_name": "app-release.apk",
@@ -59,6 +65,12 @@
       "file_name": "HyperOS_ThemeManagerV4@kashis_cringey_stuffs.zip",
       "source_url": "https://github.com/Mods-Center/HyperOS-Theme-Manager/releases/tag/theme-manager-v4",
       "version_id": "2025-04-04T14:18:40Z"
+    },
+    "LSP_Leaks": {
+      "date": "18.09.2025 13:07",
+      "file_name": "LSPosed-v1.9.2-it-7419-release.zip",
+      "source_url": "https://t.me/LSP_Leaks/38",
+      "version_id": "38"
     },
     "LSPosed-Irena": {
       "date": "10.09.2025 08:41",
@@ -260,6 +272,11 @@
     }
   },
   "telegram_state": {
+    "APatchChannel": {
+      "file_name": "APatch_11107_11107-release-signed.apk",
+      "message_id": 26,
+      "version_id": "116"
+    },
     "AndroidFaker": {
       "file_name": "app-release.apk",
       "message_id": 3,
@@ -309,6 +326,11 @@
       "file_name": "HyperOS_ThemeManagerV4@kashis_cringey_stuffs.zip",
       "message_id": 10,
       "version_id": "2025-04-04T14:18:40Z"
+    },
+    "LSP_Leaks": {
+      "file_name": "LSPosed-v1.9.2-it-7419-release.zip",
+      "message_id": 27,
+      "version_id": "38"
     },
     "LSPosed-Irena": {
       "file_name": "LSPosed-v1.9.2-7291-Irena-release.zip",
