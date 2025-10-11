@@ -379,6 +379,14 @@
       "asset_filter": "\\.apk$",
       "source_channel": "NP_Manager_Channel",
       "description": "NP Manager"
-    }
+    },
+    {
+      "name": "Re-Malwack",
+      "enabled": true,
+      "type": "github_release",
+      "source": "ZG089/Re-Malwack",
+      "asset_filter": "\\.zip$",
+      "description": "ZG089/Re-Malwack"
+}
   
 }
