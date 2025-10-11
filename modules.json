@@ -3,10 +3,11 @@
     {
       "name": "TrickyStore",
       "enabled": true,
-      "type": "github_release",
-      "source": "5ec1cff/TrickyStore",
-      "asset_filter": "\\.zip$",
-	  "description": "TrickyStore"
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "Tricky-Store-[A-Za-z0-9._-]+-release\\.zip$",
+      "source_channel": "real5ec1cff",
+      "description": "TrickyStore"
     },
     {
       "name": "pif_ci",
@@ -27,10 +28,11 @@
     {
       "name": "ZygiskNext",
       "enabled": true,
-      "type": "github_release",
-      "source": "Dr-TSNG/ZygiskNext",
-      "asset_filter": "\\.zip$",
-      "description": "Dr-TSNG/ZygiskNext"
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "Zygisk-Next-[A-Za-z0-9._-]+-release\\.zip$",
+      "source_channel": "real5ec1cff",
+      "description": "ZygiskNext"
     },
     {
       "name": "taddon_ci",
@@ -169,12 +171,12 @@
       "description": "Native Root Detector"
     },
     {
-      "name": "shamiko",
+      "name": "HyperOS-Launcher",
       "enabled": true,
       "type": "github_release",
-      "source": "LSPosed/LSPosed.github.io",
+      "source": "Mods-Center/HyperOS-Launcher",
       "asset_filter": "\\.zip$",
-      "description": "Shamiko"
+      "description": "HyperOS-Launcher"
     },
     {
       "name": "magiskalpha",
@@ -192,6 +194,155 @@
       "source": "Rem01Gaming/encore",
       "asset_filter": "release\\.zip$",
       "description": "Encore Tweaks"
+    },
+    {
+      "name": "TrickyStoreOSS",
+      "enabled": true,
+      "type": "github_release",
+      "source": "beakthoven/TrickyStoreOSS",
+      "asset_filter": "\\.zip$",
+      "description": "beakthoven/TrickyStoreOSS"
+    },
+    {
+      "name": "Apk-Protection-Patch",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Mods-Center/Apk-Protection-Patch",
+      "asset_filter": "\\.zip$",
+      "description": "Mods-Center/Apk-Protection-Patch"
+    },
+    {
+      "name": "HyperOS-Security-Center",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Mods-Center/HyperOS-Security-Center",
+      "asset_filter": "\\.zip$",
+      "description": "Mods-Center/HyperOS-Security-Center"
+    },
+    {
+      "name": "HyperOS-AOD",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Mods-Center/HyperOS-AOD",
+      "asset_filter": "\\.zip$",
+      "description": "Mods-Center/HyperOS-AOD"
+    },
+    {
+      "name": "HyperOS-App-Vault",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Mods-Center/HyperOS-App-Vault",
+      "asset_filter": "\\.zip$",
+      "description": "Mods-Center/HyperOS-App-Vault"
+    },
+    {
+      "name": "HyperOS-Theme-Manager",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Mods-Center/HyperOS-Theme-Manager",
+      "asset_filter": "\\.zip$",
+      "description": "Mods-Center/HyperOS-Theme-Manager"
+    },
+    {
+      "name": "ReVancedXposed",
+      "enabled": true,
+      "type": "github_release",
+      "source": "chsbuffer/ReVancedXposed",
+      "asset_filter": "\\.apk$",
+      "description": "chsbuffer/ReVancedXposed"
+    },
+    {
+      "name": "Fuck-for-VIP",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "Fuck for VIP_[A-Za-z0-9._-]+\\.apk$",
+      "source_channel": "bugccx",
+      "description": "Fuck for VIP"
+    },
+    {
+      "name": "Seal",
+      "enabled": true,
+      "type": "github_release",
+      "source": "JunkFood02/Seal",
+      "asset_filter": "[A-Za-z0-9._-]+-universal-release\\.apk$",
+      "description": "JunkFood02/Seal"
+    },
+    {
+      "name": "revanced-manager",
+      "enabled": true,
+      "type": "github_release",
+      "source": "ReVanced/revanced-manager",
+      "asset_filter": "\\.apk$",
+      "description": "ReVanced/revanced-manager"
+    },
+    {
+      "name": "revenge-xposed",
+      "enabled": true,
+      "type": "github_release",
+      "source": "revenge-mod/revenge-xposed",
+      "asset_filter": "\\.apk$",
+      "description": "revenge-mod/revenge-xposed"
+    },
+    {
+      "name": "revenge-manager",
+      "enabled": true,
+      "type": "github_release",
+      "source": "revenge-mod/revenge-manager",
+      "asset_filter": "\\.apk$",
+      "description": "revenge-mod/revenge-manager"
+    },
+    {
+      "name": "AndroidFaker",
+      "enabled": true,
+      "type": "github_release",
+      "source": "Android1500/AndroidFaker",
+      "asset_filter": "\\.apk$",
+      "description": "Android1500/AndroidFaker"
+    },
+    {
+      "name": "Android_Tools",
+      "enabled": true,
+      "type": "github_release",
+      "source": "ravindu644/Android_Tools",
+      "asset_filter": "\\.zip$",
+      "description": "ravindu644/Android_Tools"
+    },
+    {
+      "name": "LSPosed-Irena",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "lsposed_irena",
+      "description": "LSPosed-Irena"
+    },
+    {
+      "name": "zygote64_32",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "zygote64_32",
+      "description": "zygote64_32"
+    },
+    {
+      "name": "ReZygisk-CI",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "ReZygisk-[A-Za-z0-9._-]+-release\\.zip$",
+      "source_channel": "rezygisk_ci",
+      "description": "ReZygisk (CI)"
+    },
+    {
+      "name": "COPG_module",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "COPG_module",
+      "description": "COPG_module"
     }
   ]
 }
