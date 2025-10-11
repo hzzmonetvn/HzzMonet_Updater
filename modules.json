@@ -387,6 +387,24 @@
       "source": "ZG089/Re-Malwack",
       "asset_filter": "\\.zip$",
       "description": "ZG089/Re-Malwack"
-}
+    },
+    {
+      "name": "MMRLCI-MMRL",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "MMRL-[A-Za-z0-9._-]+\\.apk$",
+      "source_channel": "MMRLCI",
+      "description": "MMRL (from MMRLCI)"
+    },
+    {
+      "name": "MMRLCI-WebUI",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "WebUI-[A-Za-z0-9._-]+\\.apk$",
+      "source_channel": "MMRLCI",
+      "description": "WebUI (from MMRLCI)"
+    }
   
 }
