@@ -343,6 +343,15 @@
       "asset_filter": "\\.zip$",
       "source_channel": "COPG_module",
       "description": "COPG_module"
+    },
+    {
+      "name": "LSP_Leaks",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "LSP_Leaks",
+      "description": "LSP_Leaks"
     }
   ]
 }
