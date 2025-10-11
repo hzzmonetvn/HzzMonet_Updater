@@ -12,7 +12,7 @@ from telethon.sessions import StringSession
 API_ID = os.environ.get('TELEGRAM_API_ID')
 API_HASH = os.environ.get('TELEGRAM_API_HASH')
 SESSION_STRING = os.environ.get('TELEGRAM_SESSION_STRING')
-PUBLISH_CHANNEL_ID = -1002682088604
+PUBLISH_CHANNEL_ID = -1003175918466
 GIT_API_TOKEN = os.environ.get('GIT_API_TOKEN')
 
 STATE_DIR = "./state"
@@ -284,7 +284,7 @@ class TelethonPublisher:
                 f"✶ <b>File Name:</b> <code>{info['file_name']}</code>\n"
                 f"✷ <b>Update Date:</b> {info['date']}\n\n"
                 f"✹ <b><a href='{info['source_url']}'>Source</a></b>\n\n"
-                f"✦ <b><a href='https://github.com/MematiBas42/Cephanelik_Updater'>Sent With MematiBas42/Cephanelik_Updater</a></b>\n"
+                
             )
 
             print(f"[TELEGRAM] Uploading new file '{current_filename}'...")
