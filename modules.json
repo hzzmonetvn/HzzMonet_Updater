@@ -422,6 +422,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "NagramX",
       "description": "NagramX"
+    },
+    {
+      "name": "NoHello KPM",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.kpm$",
+      "source_channel": "mhm72dd",
+      "description": "mhm72dd"
     }
   ]
 }
