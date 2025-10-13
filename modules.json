@@ -413,6 +413,15 @@
       "source": "libxzr/KonaBess",
       "asset_filter": "\\.apk$",
       "description": "libxzr/KonaBess"
+    },
+    {
+      "name": "NagramX",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "NagramX",
+      "description": "NagramX"
     }
   ]
 }
