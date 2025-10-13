@@ -13,10 +13,10 @@
       "version_id": "2023-12-18T05:32:29Z"
     },
     "Android_Tools": {
-      "date": "09.10.2025 17:00",
-      "file_name": "Android_Tools_v2025-10-09-10429_ravindu644.zip",
-      "source_url": "https://github.com/ravindu644/Android_Tools/releases/tag/v2025-10-09-10429",
-      "version_id": "2025-10-09T17:00:38Z"
+      "date": "12.10.2025 08:36",
+      "file_name": "Android_Tools_v2025-10-12-28640_ravindu644.zip",
+      "source_url": "https://github.com/ravindu644/Android_Tools/releases/tag/v2025-10-12-28640",
+      "version_id": "2025-10-12T08:36:46Z"
     },
     "Apk-Protection-Patch": {
       "date": "12.08.2025 02:12",
@@ -49,10 +49,10 @@
       "version_id": "2025-05-20T14:50:22Z"
     },
     "HyperOS-Launcher": {
-      "date": "11.10.2025 12:35",
+      "date": "12.10.2025 10:44",
       "file_name": "HyperOS_LauncherV5@kashis_cringey_stuffs.zip",
       "source_url": "https://github.com/Mods-Center/HyperOS-Launcher/releases/tag/V5",
-      "version_id": "2025-10-11T12:35:39Z"
+      "version_id": "2025-10-12T10:44:24Z"
     },
     "HyperOS-Security-Center": {
       "date": "08.10.2025 17:21",
@@ -65,6 +65,12 @@
       "file_name": "HyperOS_ThemeManagerV4@kashis_cringey_stuffs.zip",
       "source_url": "https://github.com/Mods-Center/HyperOS-Theme-Manager/releases/tag/theme-manager-v4",
       "version_id": "2025-04-04T14:18:40Z"
+    },
+    "KonaBess": {
+      "date": "03.10.2025 09:15",
+      "file_name": "app-release.apk",
+      "source_url": "https://github.com/libxzr/KonaBess/releases/tag/v0.26",
+      "version_id": "2025-10-03T09:15:59Z"
     },
     "LSP_Leaks": {
       "date": "18.09.2025 13:07",
@@ -79,16 +85,16 @@
       "version_id": "15"
     },
     "MMRLCI-MMRL": {
-      "date": "10.10.2025 09:58",
-      "file_name": "MMRL-v34188-release-spoofed.apk",
-      "source_url": "https://t.me/MMRLCI/224",
-      "version_id": "224"
+      "date": "12.10.2025 12:01",
+      "file_name": "MMRL-v34189-release-spoofed.apk",
+      "source_url": "https://t.me/MMRLCI/226",
+      "version_id": "226"
     },
     "MMRLCI-WebUI": {
-      "date": "10.10.2025 09:58",
-      "file_name": "MMRL-v34188-release-spoofed.apk",
-      "source_url": "https://t.me/MMRLCI/224",
-      "version_id": "224"
+      "date": "12.10.2025 12:01",
+      "file_name": "MMRL-v34189-release-spoofed.apk",
+      "source_url": "https://t.me/MMRLCI/226",
+      "version_id": "226"
     },
     "Re-Malwack": {
       "date": "01.04.2025 03:42",
@@ -151,10 +157,10 @@
       "version_id": "bindhosts_207-2920a6b.zip"
     },
     "hma_ci": {
-      "date": "12.10.2025 00:54",
-      "file_name": "HMA-OSS-oss-121-release.zip",
+      "date": "13.10.2025 02:16",
+      "file_name": "HMA-OSS-oss-123-release.zip",
       "source_url": "https://nightly.link/frknkrc44/HMA-OSS/workflows/main.yml/master",
-      "version_id": "HMA-OSS-oss-121-release.zip"
+      "version_id": "HMA-OSS-oss-123-release.zip"
     },
     "lsposed": {
       "date": "12.10.2025 00:54",
@@ -199,10 +205,10 @@
       "version_id": "2025-03-17T01:10:35Z"
     },
     "revenge-xposed": {
-      "date": "11.10.2025 20:33",
+      "date": "12.10.2025 20:00",
       "file_name": "app-release.apk",
-      "source_url": "https://github.com/revenge-mod/revenge-xposed/releases/tag/1404",
-      "version_id": "2025-10-11T20:33:11Z"
+      "source_url": "https://github.com/revenge-mod/revenge-xposed/releases/tag/1405",
+      "version_id": "2025-10-12T20:00:32Z"
     },
     "reveny": {
       "date": "14.09.2025 17:13",
@@ -269,6 +275,46 @@
       "file_name": "app-release.apk",
       "message_id": 47,
       "version_id": "2023-12-18T05:32:29Z"
+    },
+    "Android_Tools": {
+      "file_name": "Android_Tools_v2025-10-12-28640_ravindu644.zip",
+      "message_id": 51,
+      "version_id": "2025-10-12T08:36:46Z"
+    },
+    "HyperOS-Launcher": {
+      "file_name": "HyperOS_LauncherV5@kashis_cringey_stuffs.zip",
+      "message_id": 52,
+      "version_id": "2025-10-12T10:44:24Z"
+    },
+    "KonaBess": {
+      "file_name": "app-release.apk",
+      "message_id": 53,
+      "version_id": "2025-10-03T09:15:59Z"
+    },
+    "MMRLCI-MMRL": {
+      "file_name": "MMRL-v34189-release-spoofed.apk",
+      "message_id": 54,
+      "version_id": "226"
+    },
+    "MMRLCI-WebUI": {
+      "file_name": "MMRL-v34189-release-spoofed.apk",
+      "message_id": 55,
+      "version_id": "226"
+    },
+    "hma_ci": {
+      "file_name": "HMA-OSS-oss-123-release.zip",
+      "message_id": 56,
+      "version_id": "HMA-OSS-oss-123-release.zip"
+    },
+    "magiskalpha": {
+      "file_name": "app-release.apk",
+      "message_id": 57,
+      "version_id": "708"
+    },
+    "revenge-xposed": {
+      "file_name": "app-release.apk",
+      "message_id": 58,
+      "version_id": "2025-10-12T20:00:32Z"
     }
   }
 }
