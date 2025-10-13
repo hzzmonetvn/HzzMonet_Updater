@@ -96,6 +96,12 @@
       "source_url": "https://t.me/MMRLCI/226",
       "version_id": "226"
     },
+    "NoHello KPM": {
+      "date": "02.10.2025 00:14",
+      "file_name": "Nohello-v1.0.0-13-6106b0a-release.kpm",
+      "source_url": "https://t.me/mhm72dd/77",
+      "version_id": "77"
+    },
     "Re-Malwack": {
       "date": "01.04.2025 03:42",
       "file_name": "Re-Malwack-v6.0.zip",
@@ -300,6 +306,11 @@
       "file_name": "MMRL-v34189-release-spoofed.apk",
       "message_id": 55,
       "version_id": "226"
+    },
+    "NoHello KPM": {
+      "file_name": "Nohello-v1.0.0-13-6106b0a-release.kpm",
+      "message_id": 60,
+      "version_id": "77"
     },
     "hma_ci": {
       "file_name": "HMA-OSS-oss-123-release.zip",
