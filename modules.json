@@ -405,6 +405,14 @@
       "asset_filter": "WebUI-[A-Za-z0-9._-]+\\.apk$",
       "source_channel": "MMRLCI",
       "description": "WebUI (from MMRLCI)"
+    },
+    {
+      "name": "KonaBess",
+      "enabled": true,
+      "type": "github_release",
+      "source": "libxzr/KonaBess",
+      "asset_filter": "\\.apk$",
+      "description": "libxzr/KonaBess"
     }
   ]
 }
