@@ -241,10 +241,10 @@
       "version_id": "2025-09-26T06:14:00Z"
     },
     "taddon_ci": {
-      "date": "12.10.2025 00:54",
-      "file_name": "TrickyAddonModule-v4.1-598-canary.zip",
+      "date": "14.10.2025 06:27",
+      "file_name": "TrickyAddonModule-v4.1-602-canary.zip",
       "source_url": "https://nightly.link/KOWX712/Tricky-Addon-Update-Target-List/workflows/build.yml/main",
-      "version_id": "TrickyAddonModule-v4.1-598-canary.zip"
+      "version_id": "TrickyAddonModule-v4.1-602-canary.zip"
     },
     "taddon_release": {
       "date": "25.07.2025 10:51",
@@ -326,6 +326,11 @@
       "file_name": "app-release.apk",
       "message_id": 58,
       "version_id": "2025-10-12T20:00:32Z"
+    },
+    "taddon_ci": {
+      "file_name": "TrickyAddonModule-v4.1-602-canary.zip",
+      "message_id": 61,
+      "version_id": "TrickyAddonModule-v4.1-602-canary.zip"
     }
   }
 }
