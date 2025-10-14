@@ -440,6 +440,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "mcperelease",
       "description": "mcperelease"
+    },
+    {
+      "name": "tsupport advance",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "CitraIntegrityTrick",
+      "description": "tsupport advance"
     }
   ]
 }
