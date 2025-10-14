@@ -449,6 +449,15 @@
       "asset_filter": "\\.zip$",
       "source_channel": "CitraIntegrityTrick",
       "description": "tsupport advance"
+    },
+    {
+      "name": "scene",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "scene2023",
+      "description": "scene"
     }
   ]
 }
