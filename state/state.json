@@ -228,6 +228,12 @@
       "source_url": "https://nightly.link/PerformanC/ReZygisk/workflows/trusted_ci.yml/main",
       "version_id": "ReZygisk-v1.0.0-417-67d7efa-release.zip"
     },
+    "scene": {
+      "date": "09.07.2025 09:11",
+      "file_name": "scene_8.3.0 PreRelease3 (1).apk",
+      "source_url": "https://t.me/scene2023/279",
+      "version_id": "279"
+    },
     "susfs_ci": {
       "date": "12.10.2025 00:54",
       "file_name": "release-1.5.2%2B_3d255a3.zip",
@@ -257,6 +263,12 @@
       "file_name": "TermuxRootMods-v1.0.21.zip",
       "source_url": "https://github.com/rompelhd/TermuxRootMods/releases/tag/v.1.0.21",
       "version_id": "2025-09-06T00:11:14Z"
+    },
+    "tsupport advance": {
+      "date": "15.07.2025 03:40",
+      "file_name": "Zygisk-Next-1.2.9-532-12224b8-release.zip",
+      "source_url": "https://t.me/CitraIntegrityTrick/706",
+      "version_id": "706"
     },
     "viper": {
       "date": "07.01.2025 21:55",
@@ -327,10 +339,20 @@
       "message_id": 58,
       "version_id": "2025-10-12T20:00:32Z"
     },
+    "scene": {
+      "file_name": "scene_8.3.0 PreRelease3 (1).apk",
+      "message_id": 63,
+      "version_id": "279"
+    },
     "taddon_ci": {
       "file_name": "TrickyAddonModule-v4.1-602-canary.zip",
       "message_id": 61,
       "version_id": "TrickyAddonModule-v4.1-602-canary.zip"
+    },
+    "tsupport advance": {
+      "file_name": "Zygisk-Next-1.2.9-532-12224b8-release.zip",
+      "message_id": 64,
+      "version_id": "706"
     }
   }
 }
