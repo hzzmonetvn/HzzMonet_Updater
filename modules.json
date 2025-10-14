@@ -431,6 +431,15 @@
       "asset_filter": "\\.kpm$",
       "source_channel": "mhm72dd",
       "description": "mhm72dd"
+    },
+    {
+      "name": "mcperelease",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "mcperelease",
+      "description": "mcperelease"
     }
   ]
 }
