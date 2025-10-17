@@ -458,6 +458,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "scene2023",
       "description": "scene"
+    },
+    {
+      "name": "AppManager",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.apk$",
+      "source_channel": "AppManagerDebug",
+      "description": "AppManager"
     }
   ]
 }
