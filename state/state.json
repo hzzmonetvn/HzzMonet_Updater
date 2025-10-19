@@ -157,10 +157,10 @@
       "version_id": "261"
     },
     "bindh": {
-      "date": "12.10.2025 00:54",
-      "file_name": "bindhosts_207-2920a6b.zip",
+      "date": "19.10.2025 01:37",
+      "file_name": "bindhosts_208-e28eb81.zip",
       "source_url": "https://nightly.link/bindhosts/bindhosts/workflows/release.yml/master",
-      "version_id": "bindhosts_207-2920a6b.zip"
+      "version_id": "bindhosts_208-e28eb81.zip"
     },
     "hma_ci": {
       "date": "13.10.2025 02:16",
@@ -328,6 +328,11 @@
       "file_name": "ReVancedXposed-1.0.31.apk",
       "message_id": 69,
       "version_id": "2025-10-16T03:28:29Z"
+    },
+    "bindh": {
+      "file_name": "bindhosts_208-e28eb81.zip",
+      "message_id": 75,
+      "version_id": "bindhosts_208-e28eb81.zip"
     },
     "hma_ci": {
       "file_name": "HMA-OSS-oss-123-release.zip",
