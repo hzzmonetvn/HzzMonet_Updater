@@ -247,10 +247,10 @@
       "version_id": "2025-10-19T08:34:10Z"
     },
     "taddon_ci": {
-      "date": "16.10.2025 14:45",
-      "file_name": "TrickyAddonModule-v4.1-609-canary.zip",
+      "date": "20.10.2025 03:03",
+      "file_name": "TrickyAddonModule-v4.1-611-canary.zip",
       "source_url": "https://nightly.link/KOWX712/Tricky-Addon-Update-Target-List/workflows/build.yml/main",
-      "version_id": "TrickyAddonModule-v4.1-609-canary.zip"
+      "version_id": "TrickyAddonModule-v4.1-611-canary.zip"
     },
     "taddon_release": {
       "date": "25.07.2025 10:51",
@@ -360,9 +360,9 @@
       "version_id": "2025-10-19T08:34:10Z"
     },
     "taddon_ci": {
-      "file_name": "TrickyAddonModule-v4.1-609-canary.zip",
-      "message_id": 73,
-      "version_id": "TrickyAddonModule-v4.1-609-canary.zip"
+      "file_name": "TrickyAddonModule-v4.1-611-canary.zip",
+      "message_id": 78,
+      "version_id": "TrickyAddonModule-v4.1-611-canary.zip"
     },
     "tsupport advance": {
       "file_name": "Zygisk-Next-1.2.9-532-12224b8-release.zip",
