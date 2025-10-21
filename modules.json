@@ -458,6 +458,15 @@
       "asset_filter": "\\.apk$",
       "source_channel": "AppManagerDebug",
       "description": "AppManager"
+    },
+    {
+      "name": "TreatWheel",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "\\.zip$",
+      "source_channel": "zygote64_32",
+      "description": "TreatWheel"
     }
   ]
 }
