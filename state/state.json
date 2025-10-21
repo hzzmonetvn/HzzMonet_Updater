@@ -121,10 +121,10 @@
       "version_id": "2025-10-16T03:28:29Z"
     },
     "ReZygisk-CI": {
-      "date": "23.09.2025 02:15",
-      "file_name": "ReZygisk-v1.0.0-417-67d7efa-release.zip",
-      "source_url": "https://t.me/rezygisk_ci/105",
-      "version_id": "105"
+      "date": "21.10.2025 16:13",
+      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
+      "source_url": "https://t.me/rezygisk_ci/111",
+      "version_id": "111"
     },
     "Seal": {
       "date": "16.10.2024 17:04",
@@ -223,10 +223,10 @@
       "version_id": "2025-09-14T17:13:56Z"
     },
     "rezygisk": {
-      "date": "12.10.2025 00:54",
-      "file_name": "ReZygisk-v1.0.0-417-67d7efa-release.zip",
+      "date": "21.10.2025 16:25",
+      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
       "source_url": "https://nightly.link/PerformanC/ReZygisk/workflows/trusted_ci.yml/main",
-      "version_id": "ReZygisk-v1.0.0-417-67d7efa-release.zip"
+      "version_id": "ReZygisk-v1.0.0-420-ecb2981-release.zip"
     },
     "scene": {
       "date": "09.07.2025 09:11",
@@ -329,6 +329,11 @@
       "message_id": 69,
       "version_id": "2025-10-16T03:28:29Z"
     },
+    "ReZygisk-CI": {
+      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
+      "message_id": 88,
+      "version_id": "111"
+    },
     "TrickyStore": {
       "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
       "message_id": 81,
@@ -358,6 +363,11 @@
       "file_name": "app-release.apk",
       "message_id": 58,
       "version_id": "2025-10-12T20:00:32Z"
+    },
+    "rezygisk": {
+      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
+      "message_id": 89,
+      "version_id": "ReZygisk-v1.0.0-420-ecb2981-release.zip"
     },
     "scene": {
       "file_name": "scene_8.3.0 PreRelease3 (1).apk",
