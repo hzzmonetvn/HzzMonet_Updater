@@ -223,10 +223,10 @@
       "version_id": "2025-09-14T17:13:56Z"
     },
     "rezygisk": {
-      "date": "21.10.2025 16:25",
-      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
+      "date": "21.10.2025 16:35",
+      "file_name": "ReZygisk-v1.0.0-421-6bd436a-release.zip",
       "source_url": "https://nightly.link/PerformanC/ReZygisk/workflows/trusted_ci.yml/main",
-      "version_id": "ReZygisk-v1.0.0-420-ecb2981-release.zip"
+      "version_id": "ReZygisk-v1.0.0-421-6bd436a-release.zip"
     },
     "scene": {
       "date": "09.07.2025 09:11",
@@ -365,9 +365,9 @@
       "version_id": "2025-10-12T20:00:32Z"
     },
     "rezygisk": {
-      "file_name": "ReZygisk-v1.0.0-420-ecb2981-release.zip",
-      "message_id": 89,
-      "version_id": "ReZygisk-v1.0.0-420-ecb2981-release.zip"
+      "file_name": "ReZygisk-v1.0.0-421-6bd436a-release.zip",
+      "message_id": 92,
+      "version_id": "ReZygisk-v1.0.0-421-6bd436a-release.zip"
     },
     "scene": {
       "file_name": "scene_8.3.0 PreRelease3 (1).apk",
