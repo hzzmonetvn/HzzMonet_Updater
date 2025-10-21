@@ -318,15 +318,6 @@
       "description": "LSPosed-Irena"
     },
     {
-      "name": "zygote64_32",
-      "enabled": true,
-      "type": "telegram_forwarder",
-      "source": "release",
-      "asset_filter": "\\.zip$",
-      "source_channel": "zygote64_32",
-      "description": "zygote64_32"
-    },
-    {
       "name": "COPG_module",
       "enabled": true,
       "type": "telegram_forwarder",
