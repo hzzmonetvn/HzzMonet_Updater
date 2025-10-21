@@ -458,6 +458,15 @@
       "asset_filter": "\\.zip$",
       "source_channel": "zygote64_32",
       "description": "TreatWheel"
-    }
+    },
+    {
+      "name": "Tricky Store",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "Tricky-Store-[A-Za-z0-9._-]+-release\\.zip$",
+      "source_channel": "real5ec1cff",
+      "description": "TrickyStore"
+    },        
   ]
 }
