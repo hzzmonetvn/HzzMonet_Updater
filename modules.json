@@ -327,15 +327,6 @@
       "description": "zygote64_32"
     },
     {
-      "name": "ReZygisk-CI",
-      "enabled": true,
-      "type": "telegram_forwarder",
-      "source": "release",
-      "asset_filter": "ReZygisk-[A-Za-z0-9._-]+-release\\.zip$",
-      "source_channel": "rezygisk_ci",
-      "description": "ReZygisk (CI)"
-    },
-    {
       "name": "COPG_module",
       "enabled": true,
       "type": "telegram_forwarder",
