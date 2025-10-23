@@ -187,10 +187,10 @@
       "version_id": "2025-05-31T03:10:36Z"
     },
     "pif_ci": {
-      "date": "12.10.2025 00:54",
-      "file_name": "PlayIntegrityFix_v4.3-inject-s_177.zip",
+      "date": "23.10.2025 12:40",
+      "file_name": "PlayIntegrityFix_v4.3-inject-s_178.zip",
       "source_url": "https://nightly.link/KOWX712/PlayIntegrityFix/workflows/android.yml/inject_s",
-      "version_id": "PlayIntegrityFix_v4.3-inject-s_177.zip"
+      "version_id": "PlayIntegrityFix_v4.3-inject-s_178.zip"
     },
     "pif_release": {
       "date": "03.09.2025 09:56",
@@ -358,6 +358,11 @@
       "file_name": "app-release.apk",
       "message_id": 57,
       "version_id": "708"
+    },
+    "pif_ci": {
+      "file_name": "PlayIntegrityFix_v4.3-inject-s_178.zip",
+      "message_id": 96,
+      "version_id": "PlayIntegrityFix_v4.3-inject-s_178.zip"
     },
     "revenge-xposed": {
       "file_name": "app-release.apk",
