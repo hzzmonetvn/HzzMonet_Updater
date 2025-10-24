@@ -49,10 +49,10 @@
       "version_id": "2025-05-20T14:50:22Z"
     },
     "HyperOS-Launcher": {
-      "date": "21.10.2025 02:12",
-      "file_name": "HyperOS_LauncherV5@kashis_cringey_stuffs.zip",
-      "source_url": "https://github.com/Mods-Center/HyperOS-Launcher/releases/tag/V5",
-      "version_id": "2025-10-21T02:12:05Z"
+      "date": "24.10.2025 04:03",
+      "file_name": "HyperOS_LauncherV5.1@kashis_cringey_stuffs.zip",
+      "source_url": "https://github.com/Mods-Center/HyperOS-Launcher/releases/tag/V5.1",
+      "version_id": "2025-10-24T04:03:45Z"
     },
     "HyperOS-Security-Center": {
       "date": "08.10.2025 17:21",
@@ -300,9 +300,9 @@
       "version_id": "2025-10-16T20:52:21Z"
     },
     "HyperOS-Launcher": {
-      "file_name": "HyperOS_LauncherV5@kashis_cringey_stuffs.zip",
-      "message_id": 83,
-      "version_id": "2025-10-21T02:12:05Z"
+      "file_name": "HyperOS_LauncherV5.1@kashis_cringey_stuffs.zip",
+      "message_id": 97,
+      "version_id": "2025-10-24T04:03:45Z"
     },
     "KonaBess": {
       "file_name": "app-release.apk",
