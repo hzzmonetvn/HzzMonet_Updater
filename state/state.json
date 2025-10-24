@@ -265,10 +265,10 @@
       "version_id": "2025-09-06T00:11:14Z"
     },
     "tsupport advance": {
-      "date": "15.07.2025 03:40",
-      "file_name": "Zygisk-Next-1.2.9-532-12224b8-release.zip",
-      "source_url": "https://t.me/CitraIntegrityTrick/706",
-      "version_id": "706"
+      "date": "24.10.2025 13:23",
+      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
+      "source_url": "https://t.me/CitraIntegrityTrick/815",
+      "version_id": "815"
     },
     "viper": {
       "date": "19.10.2025 18:28",
@@ -395,9 +395,9 @@
       "version_id": "2025-10-21T14:30:07Z"
     },
     "tsupport advance": {
-      "file_name": "Zygisk-Next-1.2.9-532-12224b8-release.zip",
-      "message_id": 64,
-      "version_id": "706"
+      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
+      "message_id": 101,
+      "version_id": "815"
     },
     "viper": {
       "file_name": "viper4android_module.zip",
