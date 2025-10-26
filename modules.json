@@ -458,6 +458,32 @@
       "asset_filter": "\\.zip$",
       "source_channel": "zygote64_32",
       "description": "TreatWheel"
+    },
+    {
+      "name": "fas-rs-next",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "fas-rs-next\\(release\\)\\.zip$",
+      "source_channel": "fas_rs_next",
+      "description": "fas-rs-next (release)"
+    },
+    {
+      "name": "fas-rs-next-extension",
+      "enabled": true,
+      "type": "telegram_forwarder",
+      "source": "release",
+      "asset_filter": "fas-rs-next-extension\\(release\\)\\.zip$",
+      "source_channel": "fas_rs_next",
+      "description": "fas-rs-next-extension (release)"
+    },
+    {
+      "name": "InstallerX-Revived",
+      "enabled": true,
+      "type": "github_release",
+      "source": "wxxsfxyzm/InstallerX-Revived",
+      "asset_filter": "\\.apk$",
+      "description": "wxxsfxyzm/InstallerX-Revived"
     }        
   ]
 }
