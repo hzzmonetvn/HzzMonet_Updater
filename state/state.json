@@ -139,10 +139,10 @@
       "version_id": "2024-10-16T17:04:49Z"
     },
     "TrickyStore": {
-      "date": "20.10.2025 14:41",
-      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
-      "source_url": "https://t.me/real5ec1cff/262",
-      "version_id": "262"
+      "date": "26.10.2025 15:40",
+      "file_name": "Zygisk-Next-1.3.0-RC4-638-45eea2d-release.zip",
+      "source_url": "https://t.me/real5ec1cff/263",
+      "version_id": "263"
     },
     "TrickyStoreOSS": {
       "date": "11.08.2025 16:18",
@@ -157,10 +157,10 @@
       "version_id": "2025-02-23T00:18:35Z"
     },
     "ZygiskNext": {
-      "date": "20.10.2025 14:41",
-      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
-      "source_url": "https://t.me/real5ec1cff/262",
-      "version_id": "262"
+      "date": "26.10.2025 15:40",
+      "file_name": "Zygisk-Next-1.3.0-RC4-638-45eea2d-release.zip",
+      "source_url": "https://t.me/real5ec1cff/263",
+      "version_id": "263"
     },
     "bindh": {
       "date": "19.10.2025 01:37",
@@ -358,14 +358,14 @@
       "version_id": "111"
     },
     "TrickyStore": {
-      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
-      "message_id": 81,
-      "version_id": "262"
+      "file_name": "Zygisk-Next-1.3.0-RC4-638-45eea2d-release.zip",
+      "message_id": 107,
+      "version_id": "263"
     },
     "ZygiskNext": {
-      "file_name": "Tricky-Store-v1.4.0-235-e15da3d-release.zip",
-      "message_id": 82,
-      "version_id": "262"
+      "file_name": "Zygisk-Next-1.3.0-RC4-638-45eea2d-release.zip",
+      "message_id": 108,
+      "version_id": "263"
     },
     "bindh": {
       "file_name": "bindhosts_208-e28eb81.zip",
