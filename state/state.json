@@ -115,10 +115,10 @@
       "version_id": "2025-04-01T03:42:13Z"
     },
     "ReLSPosed": {
-      "date": "12.10.2025 00:53",
-      "file_name": "LSPosed-v1.0.1-7204-zygisk-release.zip",
+      "date": "26.10.2025 20:39",
+      "file_name": "LSPosed-v1.0.1-7204-zygisk-debug.zip",
       "source_url": "https://nightly.link/ThePedroo/ReLSPosed/workflows/core.yml/master",
-      "version_id": "LSPosed-v1.0.1-7204-zygisk-release.zip"
+      "version_id": "LSPosed-v1.0.1-7204-zygisk-debug.zip"
     },
     "ReVancedXposed": {
       "date": "16.10.2025 03:28",
@@ -181,16 +181,16 @@
       "version_id": "412"
     },
     "hma_ci": {
-      "date": "13.10.2025 02:16",
-      "file_name": "HMA-OSS-oss-123-release.zip",
+      "date": "26.10.2025 20:39",
+      "file_name": "HMA-OSS-oss-123-debug.zip",
       "source_url": "https://nightly.link/frknkrc44/HMA-OSS/workflows/main.yml/master",
-      "version_id": "HMA-OSS-oss-123-release.zip"
+      "version_id": "HMA-OSS-oss-123-debug.zip"
     },
     "lsposed": {
-      "date": "12.10.2025 00:54",
-      "file_name": "LSPosed-v1.10.2-7190-zygisk-release.zip",
+      "date": "26.10.2025 20:39",
+      "file_name": "LSPosed-v1.10.2-7190-zygisk-debug.zip",
       "source_url": "https://nightly.link/JingMatrix/LSPosed/workflows/core.yml/master",
-      "version_id": "LSPosed-v1.10.2-7190-zygisk-release.zip"
+      "version_id": "LSPosed-v1.10.2-7190-zygisk-debug.zip"
     },
     "magiskalpha": {
       "date": "02.10.2025 12:54",
@@ -241,10 +241,10 @@
       "version_id": "2025-09-14T17:13:56Z"
     },
     "rezygisk": {
-      "date": "21.10.2025 22:38",
-      "file_name": "ReZygisk-v1.0.0-422-cc2c069-release.zip",
+      "date": "26.10.2025 20:39",
+      "file_name": "ReZygisk-v1.0.0-422-cc2c069-debug.zip",
       "source_url": "https://nightly.link/PerformanC/ReZygisk/workflows/trusted_ci.yml/main",
-      "version_id": "ReZygisk-v1.0.0-422-cc2c069-release.zip"
+      "version_id": "ReZygisk-v1.0.0-422-cc2c069-debug.zip"
     },
     "scene": {
       "date": "09.07.2025 09:11",
@@ -347,6 +347,11 @@
       "message_id": 60,
       "version_id": "77"
     },
+    "ReLSPosed": {
+      "file_name": "LSPosed-v1.0.1-7204-zygisk-debug.zip",
+      "message_id": 109,
+      "version_id": "LSPosed-v1.0.1-7204-zygisk-debug.zip"
+    },
     "ReVancedXposed": {
       "file_name": "ReVancedXposed-1.0.31.apk",
       "message_id": 69,
@@ -383,9 +388,14 @@
       "version_id": "412"
     },
     "hma_ci": {
-      "file_name": "HMA-OSS-oss-123-release.zip",
-      "message_id": 56,
-      "version_id": "HMA-OSS-oss-123-release.zip"
+      "file_name": "HMA-OSS-oss-123-debug.zip",
+      "message_id": 110,
+      "version_id": "HMA-OSS-oss-123-debug.zip"
+    },
+    "lsposed": {
+      "file_name": "LSPosed-v1.10.2-7190-zygisk-debug.zip",
+      "message_id": 111,
+      "version_id": "LSPosed-v1.10.2-7190-zygisk-debug.zip"
     },
     "magiskalpha": {
       "file_name": "app-release.apk",
@@ -403,9 +413,9 @@
       "version_id": "2025-10-12T20:00:32Z"
     },
     "rezygisk": {
-      "file_name": "ReZygisk-v1.0.0-422-cc2c069-release.zip",
-      "message_id": 94,
-      "version_id": "ReZygisk-v1.0.0-422-cc2c069-release.zip"
+      "file_name": "ReZygisk-v1.0.0-422-cc2c069-debug.zip",
+      "message_id": 112,
+      "version_id": "ReZygisk-v1.0.0-422-cc2c069-debug.zip"
     },
     "scene": {
       "file_name": "scene_8.3.0 PreRelease3 (1).apk",
