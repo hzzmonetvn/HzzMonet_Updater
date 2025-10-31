@@ -1,10 +1,6 @@
-# ==============================================================================
-# CẬP NHẬT KHO MODULE - v7.0 - WORKFLOW TỰ ĐỘNG DUY NHẤT
-# ==============================================================================
-# Mô tả: Phiên bản này chạy toàn bộ logic của dự án trong một file Python duy nhất
-# (`main_automation.py`). Ưu tiên sự đơn giản, dễ đọc và hoạt động ổn định.
 
-name: Tự động cập nhật CPUpdater
+
+name: Tự động cập nhật HzzMonet Updater
 on:
   schedule:
     
@@ -39,7 +35,7 @@ jobs:
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
           GIT_API_TOKEN: ${{ secrets.GIT_API_TOKEN }}
 
-      - name: Lưu thay đổi vào kho
+      - name: Lưu thay đổi
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
